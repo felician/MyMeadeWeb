@@ -1,0 +1,360 @@
+object frmGoto: TfrmGoto
+  Left = 1153
+  Height = 193
+  Top = 561
+  Width = 448
+  Caption = 'Go to ...'
+  ClientHeight = 193
+  ClientWidth = 448
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '3.2.0.0'
+  object grpRADec1: TGroupBox
+    Left = 0
+    Height = 87
+    Top = 0
+    Width = 319
+    Caption = 'RA & Dec'
+    ClientHeight = 67
+    ClientWidth = 315
+    TabOrder = 2
+    object spedRAh: TSpinEdit
+      Left = 29
+      Height = 23
+      Top = 1
+      Width = 50
+      MaxValue = 23
+      OnChange = spedRAhChange
+      TabOrder = 0
+    end
+    object lblRA1: TLabel
+      Left = 4
+      Height = 15
+      Top = 5
+      Width = 15
+      Caption = 'RA'
+    end
+    object spedRAm: TSpinEdit
+      Left = 94
+      Height = 23
+      Top = 1
+      Width = 35
+      MaxValue = 59
+      OnChange = spedRAmChange
+      TabOrder = 1
+    end
+    object spedRAs: TSpinEdit
+      Left = 145
+      Height = 23
+      Top = 1
+      Width = 35
+      MaxValue = 59
+      OnChange = spedRAsChange
+      TabOrder = 2
+    end
+    object lblDec1: TLabel
+      Left = 4
+      Height = 15
+      Top = 40
+      Width = 20
+      Caption = 'Dec'
+    end
+    object spedDecd: TSpinEdit
+      Left = 29
+      Height = 23
+      Top = 36
+      Width = 50
+      MaxValue = 89
+      MinValue = -89
+      OnChange = spedDecdChange
+      TabOrder = 3
+    end
+    object spedDecm: TSpinEdit
+      Left = 94
+      Height = 23
+      Top = 36
+      Width = 35
+      MaxValue = 59
+      OnChange = spedDecmChange
+      TabOrder = 4
+    end
+    object spedDecs: TSpinEdit
+      Left = 145
+      Height = 23
+      Top = 36
+      Width = 35
+      MaxValue = 59
+      OnChange = spedDecsChange
+      TabOrder = 5
+    end
+    object lblRAh: TLabel
+      Left = 80
+      Height = 15
+      Top = 5
+      Width = 7
+      Caption = 'h'
+    end
+    object lblRAm: TLabel
+      Left = 130
+      Height = 15
+      Top = 5
+      Width = 11
+      Caption = 'm'
+    end
+    object lblRAs: TLabel
+      Left = 181
+      Height = 15
+      Top = 5
+      Width = 5
+      Caption = 's'
+    end
+    object lblDecdeg: TLabel
+      Left = 80
+      Height = 15
+      Top = 40
+      Width = 5
+      Caption = '°'
+    end
+    object lblDecm: TLabel
+      Left = 130
+      Height = 15
+      Top = 40
+      Width = 3
+      Caption = ''''
+    end
+    object lblDecs: TLabel
+      Left = 180
+      Height = 15
+      Top = 40
+      Width = 5
+      Caption = '"'
+    end
+    object edtRA: TEdit
+      Left = 217
+      Height = 23
+      Top = 3
+      Width = 82
+      AutoSize = False
+      TabOrder = 6
+      Text = '0.00000'
+      OnClick = edtRAClick
+    end
+    object edtDec: TEdit
+      Left = 217
+      Height = 23
+      Top = 36
+      Width = 82
+      AutoSize = False
+      TabOrder = 7
+      Text = '0.00000'
+      OnClick = edtDecClick
+    end
+    object lblDecdeg2: TLabel
+      Left = 304
+      Height = 15
+      Top = 40
+      Width = 5
+      Caption = '°'
+    end
+    object lblRAh2: TLabel
+      Left = 304
+      Height = 15
+      Top = 5
+      Width = 7
+      Caption = 'h'
+    end
+  end
+  object grpAzAlt: TGroupBox
+    Left = 0
+    Height = 87
+    Top = 94
+    Width = 319
+    Caption = 'Az & Alt'
+    ClientHeight = 67
+    ClientWidth = 315
+    TabOrder = 1
+    object spedAzd: TSpinEdit
+      Left = 29
+      Height = 23
+      Top = 1
+      Width = 50
+      MaxValue = 359
+      OnChange = spedAzdChange
+      TabOrder = 2
+    end
+    object lblRA2: TLabel
+      Left = 4
+      Height = 15
+      Top = 5
+      Width = 13
+      Caption = 'Az'
+    end
+    object spedAzm: TSpinEdit
+      Left = 94
+      Height = 23
+      Top = 1
+      Width = 35
+      MaxValue = 59
+      OnChange = spedAzmChange
+      TabOrder = 3
+    end
+    object spedAzs: TSpinEdit
+      Left = 145
+      Height = 23
+      Top = 1
+      Width = 35
+      MaxValue = 59
+      OnChange = spedAzsChange
+      TabOrder = 4
+    end
+    object lblDec2: TLabel
+      Left = 4
+      Height = 15
+      Top = 40
+      Width = 15
+      Caption = 'Alt'
+    end
+    object spedAltd: TSpinEdit
+      Left = 29
+      Height = 23
+      Top = 36
+      Width = 50
+      MaxValue = 89
+      MinValue = -89
+      OnChange = spedAltdChange
+      TabOrder = 5
+    end
+    object spedAltm: TSpinEdit
+      Left = 94
+      Height = 23
+      Top = 36
+      Width = 35
+      MaxValue = 59
+      OnChange = spedAltmChange
+      TabOrder = 6
+    end
+    object spedAlts: TSpinEdit
+      Left = 145
+      Height = 23
+      Top = 36
+      Width = 35
+      MaxValue = 59
+      OnChange = spedAltsChange
+      TabOrder = 7
+    end
+    object lblRAh1: TLabel
+      Left = 80
+      Height = 15
+      Top = 5
+      Width = 5
+      Caption = '°'
+    end
+    object lblRAm1: TLabel
+      Left = 130
+      Height = 15
+      Top = 5
+      Width = 3
+      Caption = ''''
+    end
+    object lblRAs1: TLabel
+      Left = 181
+      Height = 15
+      Top = 5
+      Width = 5
+      Caption = '"'
+    end
+    object lblDecdeg1: TLabel
+      Left = 80
+      Height = 15
+      Top = 40
+      Width = 5
+      Caption = '°'
+    end
+    object lblDecm1: TLabel
+      Left = 130
+      Height = 15
+      Top = 40
+      Width = 3
+      Caption = ''''
+    end
+    object lblDecs1: TLabel
+      Left = 180
+      Height = 15
+      Top = 40
+      Width = 5
+      Caption = '"'
+    end
+    object edtAz: TEdit
+      Left = 216
+      Height = 23
+      Top = 3
+      Width = 82
+      AutoSize = False
+      TabOrder = 0
+      Text = '0.00000'
+      OnClick = edtAzClick
+    end
+    object edtAlt: TEdit
+      Left = 217
+      Height = 23
+      Top = 36
+      Width = 82
+      AutoSize = False
+      TabOrder = 1
+      Text = '0.00000'
+      OnClick = edtAltClick
+    end
+    object lblRAh3: TLabel
+      Left = 304
+      Height = 15
+      Top = 5
+      Width = 5
+      Caption = '°'
+    end
+    object lblDecdeg3: TLabel
+      Left = 304
+      Height = 15
+      Top = 40
+      Width = 5
+      Caption = '°'
+    end
+  end
+  object bitbtnRaDec: TBitBtn
+    Left = 333
+    Height = 42
+    Top = 8
+    Width = 97
+    Caption = 'Goto RA-Dec'
+    ModalResult = 1
+    OnClick = bitbtnRaDecClick
+    TabOrder = 3
+  end
+  object bitbtnCancel: TBitBtn
+    Left = 333
+    Height = 30
+    Top = 151
+    Width = 97
+    Caption = 'Cancel'
+    ModalResult = 2
+    OnClick = bitbtnCancelClick
+    TabOrder = 4
+  end
+  object bitbtnEphem: TBitBtn
+    Left = 333
+    Height = 30
+    Top = 57
+    Width = 97
+    Caption = '<- Ephemeris'
+    TabOrder = 5
+  end
+  object bitbtnAzAlt: TBitBtn
+    Left = 333
+    Height = 42
+    Top = 104
+    Width = 97
+    Caption = 'Goto Az-Alt'
+    ModalResult = 1
+    OnClick = bitbtnAzAltClick
+    TabOrder = 0
+  end
+end

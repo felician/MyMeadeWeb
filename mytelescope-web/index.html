@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" content="#0a0000">
+  <title>MyTelescope</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  MAIN PANEL                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="mainPanel" class="panel">
+
+    <!-- Header / status -->
+    <header>
+      <div class="header-title-block">
+        <div class="header-top-row">
+          <span class="header-appname">Meade16</span>
+          <span class="header-version">v1.1.5</span>
+        </div>
+        <span class="header-copy">Felician Ursache &copy;2026</span>
+      </div>
+      <div class="status-row">
+        <span class="dot disconnected" id="statusDot"></span>
+        <span id="statusText">DISCONNECTED</span>
+      </div>
+    </header>
+
+    <!-- Error bar -->
+    <div id="errorBar"></div>
+
+    <!-- Coordinates -->
+    <div class="coords-block">
+      <span class="coord-item" id="lblRA" >α  --h--m--s</span>
+      <span class="coord-item" id="lblAz" >Az ---°--'--"</span>
+      <span class="coord-item" id="lblDec">δ  ---°--'--"</span>
+      <span class="coord-item" id="lblAlt">Alt---°--'--"</span>
+    </div>
+
+    <!-- Directional pad -->
+    <div class="dpad-wrap">
+      <div class="dpad">
+        <div class="dpad-empty"></div>
+        <button class="dpad-btn" id="btnUp"    disabled title="Dec +" aria-label="Up">▲</button>
+        <div class="dpad-empty"></div>
+        <button class="dpad-btn" id="btnLeft"  disabled title="RA +" aria-label="Left">◄</button>
+        <button class="dpad-btn dpad-center" id="btnAbort" disabled aria-label="Stop">STOP</button>
+        <button class="dpad-btn" id="btnRight" disabled title="RA −" aria-label="Right">►</button>
+        <div class="dpad-empty"></div>
+        <button class="dpad-btn" id="btnDown"  disabled title="Dec −" aria-label="Down">▼</button>
+        <div class="dpad-empty"></div>
+      </div>
+    </div>
+
+    <!-- Slew rate -->
+    <div class="slew-row">
+      <div class="scale-toggle-wrap">
+        <label class="toggle-switch">
+          <input type="checkbox" id="scaleToggle">
+          <span class="toggle-slider"></span>
+        </label>
+        <span id="scaleLabel">Slew Normal</span>
+      </div>
+      <div class="slew-center">
+        <span id="slewRateVal">5°</span>
+        <input type="range" id="slewRateSlider" min="1" max="30" step="1" value="20">
+      </div>
+      <div class="trk-toggle-wrap" id="trackingToggleWrap" title="Tracking On/Off">
+        <label class="toggle-switch">
+          <input type="checkbox" id="trackingToggle" disabled>
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="trk-label">Tracking</span>
+      </div>
+    </div>
+
+    <!-- Action buttons row 1 -->
+    <div class="actions-grid">
+      <button class="act-btn connect" id="btnConnect">Connect</button>
+      <button class="act-btn"         id="btnGoto"    disabled>GoTo</button>
+      <button class="act-btn"         id="btnPark"    disabled>Park</button>
+    </div>
+
+    <!-- Special buttons row 2 -->
+    <div class="actions-grid-2">
+      <button class="act-btn special" id="btnService" disabled>Service</button>
+      <button class="act-btn special" id="btnStart"   disabled>Start</button>
+    </div>
+
+    <!-- Bottom navigation -->
+    <div class="bottom-menu">
+      <button class="menu-btn" id="btnProperties">Properties</button>
+      <button class="menu-btn" id="btnSettings">⚙ Settings</button>
+    </div>
+
+  </div><!-- /mainPanel -->
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  GOTO PANEL                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="gotoPanel" class="panel">
+
+    <div class="panel-header">
+      <button class="panel-back" id="gotoBack">‹</button>
+      <span class="panel-title">Go To…</span>
+    </div>
+
+    <!-- RA / Dec section -->
+    <div class="goto-section">
+      <div class="goto-section-title">RA &amp; Dec</div>
+
+      <div class="dms-row">
+        <span class="dms-label">RA</span>
+        <input class="dms-input" type="number" id="RAh"  min="0"   max="23"  step="1" value="0">
+        <span class="dms-sep">h</span>
+        <input class="dms-input" type="number" id="RAm"  min="0"   max="59"  step="1" value="0">
+        <span class="dms-sep">m</span>
+        <input class="dms-input" type="number" id="RAs"  min="0"   max="59"  step="1" value="0">
+        <span class="dms-sep">s</span>
+      </div>
+
+      <div class="dms-row">
+        <span class="dms-label">Dec</span>
+        <input class="dms-input" type="number" id="Decd" min="-89"  max="89"  step="1" value="0">
+        <span class="dms-sep">°</span>
+        <input class="dms-input" type="number" id="Decm" min="0"   max="59"  step="1" value="0">
+        <span class="dms-sep">'</span>
+        <input class="dms-input" type="number" id="Decs" min="0"   max="59"  step="1" value="0">
+        <span class="dms-sep">"</span>
+      </div>
+
+      <div class="decimal-display">
+        = <span id="displayRA">0.000000 h</span> &nbsp; <span id="displayDec">0.000000 °</span>
+      </div>
+    </div>
+
+    <div class="goto-action-row">
+      <button class="goto-btn" id="btnGotoRaDec">→ Goto RA / Dec</button>
+    </div>
+
+    <div class="goto-divider"></div>
+
+    <!-- Az / Alt section -->
+    <div class="goto-section">
+      <div class="goto-section-title">Az &amp; Alt</div>
+
+      <div class="dms-row">
+        <span class="dms-label">Az</span>
+        <input class="dms-input" type="number" id="Azd"  min="0"   max="359" step="1" value="0">
+        <span class="dms-sep">°</span>
+        <input class="dms-input" type="number" id="Azm"  min="0"   max="59"  step="1" value="0">
+        <span class="dms-sep">'</span>
+        <input class="dms-input" type="number" id="Azs"  min="0"   max="59"  step="1" value="0">
+        <span class="dms-sep">"</span>
+      </div>
+
+      <div class="dms-row">
+        <span class="dms-label">Alt</span>
+        <input class="dms-input" type="number" id="Altd" min="-89"  max="89"  step="1" value="0">
+        <span class="dms-sep">°</span>
+        <input class="dms-input" type="number" id="Altm" min="0"   max="59"  step="1" value="0">
+        <span class="dms-sep">'</span>
+        <input class="dms-input" type="number" id="Alts" min="0"   max="59"  step="1" value="0">
+        <span class="dms-sep">"</span>
+      </div>
+
+      <div class="decimal-display">
+        = <span id="displayAz">0.000000 °</span> &nbsp; <span id="displayAlt">0.000000 °</span>
+      </div>
+    </div>
+
+    <div class="goto-action-row">
+      <button class="goto-btn" id="btnGotoAzAlt">→ Goto Az / Alt</button>
+    </div>
+
+  </div><!-- /gotoPanel -->
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  PROPERTIES PANEL                                            -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="propPanel" class="panel">
+
+    <div class="panel-header">
+      <button class="panel-back" id="propBack">‹</button>
+      <span class="panel-title">Properties</span>
+    </div>
+
+    <pre id="propContent">Conectează telescopul pentru a vedea proprietățile.</pre>
+
+  </div><!-- /propPanel -->
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  SETTINGS PANEL                                              -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="settingsPanel" class="panel">
+
+    <div class="panel-header">
+      <button class="panel-back" id="settingsBack">‹</button>
+      <span class="panel-title">Settings</span>
+    </div>
+
+    <div class="settings-body">
+
+      <div>
+        <div class="settings-group-title">Alpaca Server</div>
+        <div class="settings-field">
+          <label for="settingsUrl">URL (ex: http://192.168.1.10:11111)</label>
+          <input class="settings-input" type="text" id="settingsUrl"
+                 placeholder="http://localhost:11111" autocomplete="off">
+        </div>
+      </div>
+
+      <div>
+        <div class="settings-group-title">Butoane speciale</div>
+        <div class="settings-row2">
+          <div class="settings-field">
+            <label for="settingsSvcLabel">Button 1 — Nume</label>
+            <input class="settings-input" type="text" id="settingsSvcLabel" placeholder="Service">
+          </div>
+          <div class="settings-field">
+            <label for="settingsStartLabel">Button 2 — Nume</label>
+            <input class="settings-input" type="text" id="settingsStartLabel" placeholder="Start">
+          </div>
+        </div>
+        <div class="settings-row2">
+          <div class="settings-field">
+            <label>Button 1 — Az °</label>
+            <input class="settings-input" type="number" id="settingsSvcAz"  step="0.1" placeholder="220">
+          </div>
+          <div class="settings-field">
+            <label>Button 1 — Alt °</label>
+            <input class="settings-input" type="number" id="settingsSvcAlt" step="0.1" placeholder="15">
+          </div>
+        </div>
+        <div class="settings-row2">
+          <div class="settings-field">
+            <label>Button 2 — Az °</label>
+            <input class="settings-input" type="number" id="settingsStartAz"  step="0.1" placeholder="160">
+          </div>
+          <div class="settings-field">
+            <label>Button 2 — Alt °</label>
+            <input class="settings-input" type="number" id="settingsStartAlt" step="0.1" placeholder="60">
+          </div>
+        </div>
+      </div>
+
+      <button class="save-btn" id="btnSettingsSave">Salvează</button>
+
+    </div>
+
+  </div><!-- /settingsPanel -->
+
+</div><!-- /app -->
+
+<script src="js/coords.js"></script>
+<script src="js/alpaca.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

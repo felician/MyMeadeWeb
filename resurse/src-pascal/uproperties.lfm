@@ -1,0 +1,21 @@
+object frmProperties: TfrmProperties
+  Left = 1504
+  Height = 602
+  Top = 384
+  Width = 324
+  Caption = 'frmProperties'
+  ClientHeight = 602
+  ClientWidth = 324
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '3.2.0.0'
+  object memoProperties: TMemo
+    Left = 0
+    Height = 602
+    Top = 0
+    Width = 324
+    Align = alClient
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+end

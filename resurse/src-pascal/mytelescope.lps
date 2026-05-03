@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Release"/>
+    <Units>
+      <Unit>
+        <Filename Value="mytelescope.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <CursorPos Y="29"/>
+        <UsageCount Value="215"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMain"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="106"/>
+        <CursorPos X="15" Y="393"/>
+        <UsageCount Value="215"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uproperties.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmProperties"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uProperties"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="35"/>
+        <CursorPos X="31" Y="42"/>
+        <UsageCount Value="294"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ugoto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmGoto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uGoto"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="98"/>
+        <CursorPos X="93" Y="138"/>
+        <UsageCount Value="234"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="usettings.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSettings"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSettings"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="4" Y="38"/>
+        <UsageCount Value="232"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tel_utils.inc"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="11" Y="155"/>
+        <UsageCount Value="107"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hns_Upla.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="124"/>
+        <CursorPos X="16" Y="145"/>
+        <UsageCount Value="79"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hns_uDE.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="163"/>
+        <CursorPos X="31" Y="616"/>
+        <UsageCount Value="79"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hns_Uast.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="907"/>
+        <CursorPos X="16" Y="907"/>
+        <UsageCount Value="78"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="489" Column="3" TopLine="478"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="516" Column="3" TopLine="514"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="493" Column="9" TopLine="487"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="110" Column="5" TopLine="76"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="121" Column="19" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="117" Column="20" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="133" Column="19" TopLine="95"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="164" Column="34" TopLine="145"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="99" Column="33" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="109" Column="20" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="114" Column="21" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="115" Column="3" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="122" Column="20" TopLine="108"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="127" Column="20" TopLine="108"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="527" Column="3" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="372" Column="53" TopLine="372"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="528" Column="6" TopLine="509"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="132" Column="35" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="118" Column="87" TopLine="105"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="124" Column="89" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="135" Column="89" TopLine="107"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="121" Column="3" TopLine="108"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="127" Column="94" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="138" Column="94" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="124" Column="3" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="130" Column="89" TopLine="112"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="141" Column="89" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="127" Column="3" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="ugoto.pas"/>
+        <Caret Line="133" Column="93" TopLine="115"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="393" Column="15" TopLine="356"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="umain.pas"/>
+        <Line Value="443"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
