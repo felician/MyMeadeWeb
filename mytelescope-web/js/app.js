@@ -124,6 +124,10 @@ const App = (() => {
       if (!state.connected) {
         await Alpaca.connect();
         state.connected = true;
+        try {
+          const parked = await Alpaca.getAtPark();
+          if (parked) await Alpaca.unpark();
+        } catch {}
         startTimer();
       } else {
         stopTimer();

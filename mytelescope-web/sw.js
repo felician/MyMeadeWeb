@@ -1,4 +1,4 @@
-const CACHE = 'mytelescope-v1.1.5';
+const CACHE = 'mytelescope-v1.1.6';
 const ASSETS = [
   '/index.html',
   '/style.css',
